@@ -1,0 +1,5 @@
+# Save by mofid on 2024_07_09-07.02.32; build 2023 2022_09_28-21.41.55 183150
+from abaqus import *
+upgradeMdb('C:/Users/mofid/Downloads/simple_rail_wheel-2021-HF3.cae', 
+    'C:/Users/mofid/Downloads/simple_rail_wheel.cae')
+# Save by mofid on 2024_07_09-07.02.32; build 2023 2022_09_28-21.41.55 183150

@@ -1,0 +1,41 @@
+# Save by mofid on 2024_07_11-03.11.07; build 2023 2022_09_28-21.41.55 183150
+from abaqus import *
+upgradeMdb('C:/Users/mofid/Downloads/simple_rail_wheel-2021-HF3-2021-HF3.cae', 
+    'C:/Users/mofid/Downloads/simple_rail_wheel-2021-HF3.cae')
+# Save by mofid on 2024_07_11-03.11.07; build 2023 2022_09_28-21.41.55 183150
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.jobs['Job-11']
+mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
+    description='', echoPrint=OFF, explicitPrecision=SINGLE, 
+    getMemoryFromAnalysis=True, historyPrint=OFF, memory=90, memoryUnits=
+    PERCENTAGE, model='Model-1', modelPrint=OFF, multiprocessingMode=DEFAULT, 
+    name='Job-1', nodalOutputPrecision=SINGLE, numCpus=1, numDomains=1, 
+    numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, 
+    scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-QCIN5NE', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
+    'message': 'NO STEP DEFINITION WAS FOUND', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ABORTED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase failed due to errors', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ERROR, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_ABORTED, {
+    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.', 
+    'jobName': 'Job-1'})
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+# Save by mofid on 2024_07_11-03.14.05; build 2023 2022_09_28-21.41.55 183150
